@@ -14,6 +14,7 @@
 		E7B6922D2761A73700D13533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B6922C2761A73700D13533 /* Assets.xcassets */; };
 		E7B692302761A73700D13533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B6922E2761A73700D13533 /* LaunchScreen.storyboard */; };
 		E7B692382761A94900D13533 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B692372761A94900D13533 /* CustomCell.swift */; };
+		E7B6923C2761ABEC00D13533 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6923B2761ABEC00D13533 /* ApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E7B6922F2761A73700D13533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7B692312761A73700D13533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7B692372761A94900D13533 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		E7B6923B2761ABEC00D13533 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E7B692252761A73600D13533 /* SceneDelegate.swift */,
 				E7B692272761A73600D13533 /* ViewController.swift */,
 				E7B692372761A94900D13533 /* CustomCell.swift */,
+				E7B6923B2761ABEC00D13533 /* ApiCaller.swift */,
 				E7B692292761A73600D13533 /* Main.storyboard */,
 				E7B6922C2761A73700D13533 /* Assets.xcassets */,
 				E7B6922E2761A73700D13533 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				E7B692242761A73600D13533 /* AppDelegate.swift in Sources */,
 				E7B692382761A94900D13533 /* CustomCell.swift in Sources */,
 				E7B692262761A73600D13533 /* SceneDelegate.swift in Sources */,
+				E7B6923C2761ABEC00D13533 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
