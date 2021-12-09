@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     private var companyList = [String]()
     
-    var observer: AnyCancellable?
+    var observers: [AnyCancellable] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.frame = view.bounds
         
-        observer = ApiCaller.shared.fetchCompanyList()
+        ApiCaller.shared.fetchCompanyList()
             .receive(on: DispatchQueue.main, options: nil)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         }, receiveValue: { [weak self] value in
             self?.companyList = value
             self?.tableView.reloadData()
-        })
+        }).store(in: &observers)
     }
 }
 
@@ -51,7 +51,13 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomCell else {
             fatalError()
         }
-        cell.textLabel?.text = companyList[indexPath.row]
+        
+        cell.configureCell(companyList[indexPath.row])
+        
+        cell.buttonTapped.sink { value in
+            print(value)
+        }.store(in: &observers)
+        
         return cell
     }
 }
